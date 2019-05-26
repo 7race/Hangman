@@ -1,0 +1,109 @@
+<!-- игра "виселица" -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hangman</title>
+
+    <link href="main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- canvas1 для отображения пропусков, canvas2 для отображения виселицы -->
+    <canvas id="canvas1" width="770" height="100"></canvas>
+    <canvas id="canvas2" width="770" height="200"></canvas>
+
+    <!-- отображение оставшихся попыток -->
+    <span class="number" id="num0">0</span>
+    <span class="number" id="num1">1</span>
+    <span class="number" id="num2">2</span>
+    <span class="number" id="num3">3</span>
+    <span class="number" id="num4">4</span>
+    <span class="number" id="num5">5</span>
+    <span class="number" id="num6">6</span>
+    <span class="number" id="num7">7</span>
+    <span class="number" id="num8">8</span>
+    <span class="number" id="num9">9</span>
+    <span class="number" id="num10">10</span>
+
+    <!-- рисунок для красоты -->
+    <img src="sun.jpg" width="100" />
+
+    <!-- буквы в слове, цифра за id указывает на номер позиции буквы в слове(например, если цифра 2, значит буква в слове вторая, если цифры нет значит первая) -->
+    <span class="letter" id="c">c</span>
+    <span class="letter" id="o">o</span>
+    <span class="letter" id="o2">o</span>
+    <span class="letter" id="o3">o</span>
+    <span class="letter" id="f3">f</span>
+    <span class="letter" id="f4">f</span>
+    <span class="letter" id="e5">e</span>
+    <span class="letter" id="e6">e</span>
+    <span class="letter" id="e7">e</span>
+    <span class="letter" id="p">p</span>
+    <span class="letter" id="p4">p</span>
+    <span class="letter" id="r2">r</span>
+    <span class="letter" id="r8">r</span>
+    <span class="letter" id="r5">r</span>
+    <span class="letter" id="g4">g</span>
+    <span class="letter" id="g5">g</span>
+    <span class="letter" id="a3">a</span>
+    <span class="letter" id="a6">a</span>
+    <span class="letter" id="m3">m</span>
+    <span class="letter" id="m7">m</span>
+    <span class="letter" id="n4">n</span>
+    <span class="letter" id="u5">u</span>
+    <span class="letter" id="t6">t</span>
+
+    <!-- отображаем клавиатуру -->
+    <div class="keyboard">
+      <a href="#" class="button" id="bq">q</a>&nbsp;
+      <a href="#" class="button" id="bw">w</a>&nbsp;
+      <a href="#" class="button" id="be">e</a>&nbsp;
+      <a href="#" class="button" id="br">r</a>&nbsp;
+      <a href="#" class="button" id="bt">t</a>&nbsp;
+      <a href="#" class="button" id="by">y</a>&nbsp;
+      <a href="#" class="button" id="bu">u</a>&nbsp;
+      <a href="#" class="button" id="bi">i</a>&nbsp;
+      <a href="#" class="button" id="bo">o</a>&nbsp;
+      <a href="#" class="button" id="bp">p</a>&nbsp; <br /><br />
+      <span style="padding: 0px 20px;">&nbsp;</span>
+      <a href="#" class="button" id="ba">a</a>&nbsp;
+      <a href="#" class="button" id="bs">s</a>&nbsp;
+      <a href="#" class="button" id="bd">d</a>&nbsp;
+      <a href="#" class="button" id="bf">f</a>&nbsp;
+      <a href="#" class="button" id="bg">g</a>&nbsp;
+      <a href="#" class="button" id="bh">h</a>&nbsp;
+      <a href="#" class="button" id="bj">j</a>&nbsp;
+      <a href="#" class="button" id="bk">k</a>&nbsp;
+      <a href="#" class="button" id="bl">l</a>&nbsp; <br /><br />
+      <span style="padding: 0px 57px;">&nbsp;</span>
+      <a href="#" class="button" id="bz">z</a>&nbsp;
+      <a href="#" class="button" id="bx">x</a>&nbsp;
+      <a href="#" class="button" id="bc">c</a>&nbsp;
+      <a href="#" class="button" id="bv">v</a>&nbsp;
+      <a href="#" class="button" id="bb">b</a>&nbsp;
+      <a href="#" class="button" id="bn">n</a>&nbsp;
+      <a href="#" class="button" id="bm">m</a>&nbsp;
+    </div>
+
+    <!-- поздравление с победой -->
+    <div class="winnerMessage">
+      <span class="styleEndMessage">Congratulations!</span><br />
+      <span class="styleEndMessage">You've won!</span>
+      <br /><br />
+      <a href="#" class="playAgain">Play again</a>
+    </div>
+
+    <!-- поздравление с проигрышем -->
+    <div class="loseMessage">
+      <span class="styleEndMessage">You've lost!</span>
+      <br /><br />
+      <a href="#" class="showWord">The word was: </a>&nbsp;&nbsp;&nbsp;
+      <br /><br />
+      <br /><br />
+      <a href="#" class="playAgain">Play again</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
